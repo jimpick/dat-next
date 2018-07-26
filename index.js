@@ -1,4 +1,4 @@
-var Dat = require('dat-node')
+var Dat = require('@jimpick/dat-node-hyperdb-only')
 var encoding = require('dat-encoding')
 
 module.exports = run

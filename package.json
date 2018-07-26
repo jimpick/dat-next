@@ -1,9 +1,9 @@
 {
-  "name": "dat-next",
-  "version": "4.0.3",
+  "name": "@jimpick/dat-next",
+  "version": "4.0.3-1",
   "description": "Next version of the Dat CLI client",
   "bin": {
-    "dat-next": "cli.js"
+    "dat-next-jimpick": "cli.js"
   },
   "scripts": {
     "test": "standard"
@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/joehand/dat-next#readme",
   "dependencies": {
+    "@jimpick/dat-node-hyperdb-only": "^3.5.8-1",
     "cli-truncate": "^1.0.0",
     "dat-encoding": "^4.0.2",
-    "dat-node": "github:datproject/dat-node#hyperdb",
     "dat-storage": "^1.0.0",
     "debug": "^2.4.5",
     "minimist": "^1.2.0",
