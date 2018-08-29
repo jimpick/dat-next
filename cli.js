@@ -2,14 +2,14 @@
 
 var path = require('path')
 var minimist = require('minimist')
-var pretty = require('prettier-bytes')
-var speed = require('speedometer')
-var progress = require('progress-string')
-var cliTruncate = require('cli-truncate')
-var neatLog = require('neat-log')
-var mirror = require('mirror-folder')
-var debug = require('debug')('dat-next')
-var view = require('./ui')
+// var pretty = require('prettier-bytes')
+// var speed = require('speedometer')
+// var progress = require('progress-string')
+// var cliTruncate = require('cli-truncate')
+// var neatLog = require('neat-log')
+// var mirror = require('@jimpick/mirror-folder')
+// var debug = require('debug')('dat-next')
+// var view = require('./ui')
 
 var Dat = require('./')
 
@@ -25,10 +25,10 @@ var argv = minimist(process.argv.slice(2), {
 
 var src = argv._[0] || process.cwd()
 var dest = argv._[1]
-var logspeed = argv.logspeed || 400
-var quiet = debug.enabled || !!process.env.DEBUG
+// var logspeed = argv.logspeed || 400
+// var quiet = debug.enabled || !!process.env.DEBUG
 
-if (!argv._.length || argv.help) return usage()
+if (!argv._.length || argv.help) usage()
 
 runDat()
 
@@ -50,7 +50,6 @@ function runDat () {
         })
       })
     }
-
 
     function share () {
       network.on('connection', function () {

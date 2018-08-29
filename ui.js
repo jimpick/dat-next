@@ -30,7 +30,6 @@ function progressView (state) {
 
 function archiveUI (state) {
   if (!state.archive || !state.stats) return ''
-  var archive = state.archive
 
   var stats = state.stats.get()
   var size = stats.byteLength || 0
@@ -96,7 +95,7 @@ function downloadUI (state) {
 }
 
 function importUI (state) {
-  if (state.count) {// Initial import done
+  if (state.count) { // Initial import done
     if (state.importer.putDone.files >= state.count.files) {
       if (state.importer.pending.length) return 'Importing updated files.'
       if (!state.opts.watch) return 'All files imported.'
@@ -104,7 +103,7 @@ function importUI (state) {
     }
   } else {
     if (!state.importer.count.files) return `Checking for file updates ...`
-      var indexSpeed = state.importer.indexSpeed ? `(${pretty(state.importer.indexSpeed)}/s)` : ''
+    var indexSpeed = state.importer.indexSpeed ? `(${pretty(state.importer.indexSpeed)}/s)` : ''
     return output(`
       Imported ${state.importer.putDone.files} of ${state.importer.count.files} files ${indexSpeed}
       (Calculating total import count...)
